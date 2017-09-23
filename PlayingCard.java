@@ -64,23 +64,7 @@ class Card {
     }
 
     
-    /* Few quick tests here */
-    public static void main(String args[])
-    {
-	try {
-	    Card c1 = new Card(4,1);    // A Spades
-	    System.out.println(c1);
-	    c1 = new Card(1,10);	// 10 Clubs
-	    System.out.println(c1);
-	    c1 = new Card(0,2);		// Joker #2
-	    System.out.println(c1);
-	    c1 = new Card(5,10);        // generate exception here
-	}
-	catch (PlayingCardException e)
-	{
-	    System.out.println("PlayingCardException: "+e.getMessage());
-	}
-    }
+
 }
 
 
@@ -129,7 +113,7 @@ class Decks {
         }
         
         gameDecks.addAll(originalDecks);
-    	// implement this method!
+    	
     }
     	else{
 
@@ -195,7 +179,7 @@ class Decks {
     	        }
     	        
     	        
-    	    numberDecks++; 	// implement this method!
+    	    numberDecks++; 
     	    }
     		gameDecks.addAll(originalDecks);
     	}
@@ -238,7 +222,7 @@ class Decks {
     	    		}
     	    		gameDecks.addAll(originalDecks);
     	    	}
-        // implement this method!
+        
     }
 
 
@@ -246,14 +230,14 @@ class Decks {
     public void shuffle()
     {
     	Collections.shuffle(gameDecks);
-        // implement this method!
+       
     	
     }
 
    
     public List<Card> deal(int numberCards) throws PlayingCardException
     {
-        // implement this method!
+        
     	List<Card> temp = new ArrayList();
     	for(int i = 0; i < numberCards; i++){
     		if(gameDecks.isEmpty()){
